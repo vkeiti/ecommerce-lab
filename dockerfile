@@ -12,7 +12,7 @@ RUN npm run build
 
 FROM nginx:latest
 
-COPY --from=build /usr/local/app/dist/add-to-cart /usr/share/nginx/html
+COPY --from=build /usr/local/app/dist/ecommerce /usr/share/nginx/html
 
 
 EXPOSE 80
