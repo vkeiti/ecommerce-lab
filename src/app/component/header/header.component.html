@@ -1,0 +1,24 @@
+<header>
+    <div class="navbar navbar-dark bg-dark shadow-sm" >
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp;
+            </i>
+            <strong style="font-size: 30px;">Loxinha</strong>
+            <div class="col-md-2">
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="pesquisa" >
+            </div>
+            
+        </div>
+        <div>
+            <div style="float: left;">
+                <button routerLink="cart" class="btn btn-dark">
+                    <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+                    <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+                </button>
+            </div>
+            <div class="logout" (click)="logoutService.logout()" routerLinkActive="active" style="float: right; height: 48px; width: 48px;">
+            </div>
+        </div>
+        
+    </div>
+</header>
